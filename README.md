@@ -8,13 +8,17 @@
 
 The framework operates via an isolated Orchestrator pattern. It crawls source hierarchies, strips compiling overhead (`bin/`, `obj/`), aggregates file payloads, and pipes the codebase context through independent, specialized markdown agent prompts using an exponential backoff retry pipeline.
 
-            [ core_orchestrator.py ]
-                        │
+## 🛠️ System Architecture & Workflow
 
-┌───────────────────────┼───────────────────────┐
-▼ ▼ ▼
-[ Agent A: Technical ] [ Agent B: Portfolio ] [ Agent C: Static Code ]
-[ LaTeX Report ] [ Readme Refiner ] [ Audit & Review ]
+The framework operates via an isolated Orchestrator pattern. It crawls source hierarchies, strips compiling overhead (`bin/`, `obj/`), aggregates file payloads, and pipes the codebase context through a multi-agent processing layer running concurrent evaluation pipelines.
+
+| Core Engine Orchestration |
+| :--- |
+| **`core_orchestrator.py`** <br> └ *Ingests workspace payload → Initiates agent tasks* |
+
+| Target Generation Pipeline | | |
+| :--- | :--- | :--- |
+| **Agent A: Technical** <br> 📄 `ACADEMIC_REPORT.tex` | **Agent B: Portfolio** <br> 📝 `README_PREMIUM.md` | **Agent C: Static Code** <br> 🔍 `CODE_QUALITY_AUDIT.md` |
 
 ## 💎 Features
 
