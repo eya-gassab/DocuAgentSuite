@@ -6,10 +6,6 @@
 
 ## 🛠️ System Architecture & Workflow
 
-The framework operates via an isolated Orchestrator pattern. It crawls source hierarchies, strips compiling overhead (`bin/`, `obj/`), aggregates file payloads, and pipes the codebase context through independent, specialized markdown agent prompts using an exponential backoff retry pipeline.
-
-## 🛠️ System Architecture & Workflow
-
 The framework operates via an isolated Orchestrator pattern. It crawls source hierarchies, strips compiling overhead (`bin/`, `obj/`), aggregates file payloads, and pipes the codebase context through a multi-agent processing layer running concurrent evaluation pipelines.
 
 | Core Engine Orchestration |
